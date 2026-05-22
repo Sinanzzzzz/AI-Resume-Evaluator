@@ -65,15 +65,26 @@ The system uses transformer-based semantic similarity, keyword matching, and AI-
 ## Project Structure
 
 ```bash
-ai-resume-evaluator/
+AI-Resume-Evaluator/
 │
 ├── backend/
-├── frontend/
-├── static/
-├── templates/
+│   ├── main.py
+│   ├── requirements.txt
+│   └── .env              # (not included in repo)
+│
+├── template/
+│   ├── builder/
+│   │   ├── builder.css
+│   │   └── builder.js
+│   ├── Ats.html
+│   ├── builder.html
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
+│
 ├── screenshots/
+│
 ├── README.md
-├── requirements.txt
 └── .gitignore
 ```
 
