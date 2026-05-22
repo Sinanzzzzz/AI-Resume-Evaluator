@@ -1,0 +1,380 @@
+/* Layout Container */
+.builder-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px 5%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .builder-main { grid-template-columns: 1fr; }
+}
+
+/* Sidebar Editor */
+.editor-section {
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+/* Sticky Preview Section */
+.preview-section {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+/* Resume Placeholder */
+.resume-placeholder {
+  padding: 60px 40px;
+  text-align: center;
+  color: #666;
+  background: #f8f9fa;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* ========== MODERN ATS TEMPLATE (DEFAULT - MATCHES SCREENSHOT) ========== */
+.resume.modern {
+  background: #ffffff !important;
+  color: #000000 !important;
+  padding: 40px 50px !important;
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  min-height: 842px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* Header Section */
+.resume.modern .resume-header {
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.resume.modern .resume-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000 !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.resume.modern .resume-header h3 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333 !important;
+}
+
+.resume.modern .resume-header .contact-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 8px 0;
+  font-size: 11px;
+  color: #000000 !important;
+}
+
+.resume.modern .resume-header .contact-line span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Two Column Layout */
+.resume.modern .resume-body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Left Column Styling */
+.resume.modern .left-column h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000 !important;
+  margin: 20px 0 10px 0;
+  text-transform: none;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.resume.modern .left-column h4:first-child {
+  margin-top: 0;
+}
+
+.resume.modern .left-column ul {
+  padding-left: 0;
+  margin: 5px 0 15px 0;
+  list-style: none;
+}
+
+.resume.modern .left-column ul li {
+  margin: 4px 0;
+  font-size: 11px;
+  color: #000000 !important;
+  line-height: 1.5;
+}
+
+.resume.modern .left-column p {
+  margin: 5px 0;
+  font-size: 11px;
+  color: #000000 !important;
+  line-height: 1.5;
+}
+
+/* Right Column Styling */
+.resume.modern .right-column h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000 !important;
+  margin: 20px 0 10px 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e0e0e0;
+  text-transform: none;
+}
+
+.resume.modern .right-column h4:first-child {
+  margin-top: 0;
+}
+
+.resume.modern .right-column .experience-item {
+  margin-bottom: 15px;
+}
+
+.resume.modern .right-column .experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+
+.resume.modern .right-column .experience-header h5 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000000 !important;
+}
+
+.resume.modern .right-column .experience-header .date {
+  font-size: 11px;
+  color: #333333 !important;
+  white-space: nowrap;
+}
+
+.resume.modern .right-column .experience-title {
+  font-size: 11px;
+  font-style: italic;
+  color: #333333 !important;
+  margin-bottom: 5px;
+}
+
+.resume.modern .right-column .experience-description {
+  font-size: 11px;
+  color: #000000 !important;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.resume.modern .right-column ul {
+  padding-left: 20px;
+  margin: 5px 0;
+  list-style: disc;
+}
+
+.resume.modern .right-column ul li {
+  margin: 3px 0;
+  font-size: 11px;
+  color: #000000 !important;
+  line-height: 1.5;
+}
+
+/* ========== SANTIAGO TEMPLATE (COLORED SIDEBAR) ========== */
+.resume.santiago {
+  background: #ffffff !important;
+  color: #2d2d2d !important;
+  padding: 0 !important;
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  min-height: 842px;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  overflow: hidden;
+}
+
+.resume.santiago .resume-sidebar {
+  background: linear-gradient(135deg, #2c5f7c 0%, #1a3a4d 100%) !important;
+  color: #ffffff !important;
+  padding: 40px 25px;
+}
+
+.resume.santiago .resume-sidebar h1 {
+  margin: 0 0 5px 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.resume.santiago .resume-sidebar h3 {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #a8d5e8 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.resume.santiago .resume-sidebar .contact-info {
+  margin: 25px 0;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.resume.santiago .resume-sidebar .contact-info p {
+  margin: 8px 0;
+  font-size: 11px;
+  color: #e6f3f8 !important;
+  line-height: 1.6;
+}
+
+.resume.santiago .resume-sidebar h4 {
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 25px 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #a8d5e8;
+  padding-bottom: 5px;
+}
+
+.resume.santiago .resume-sidebar ul {
+  padding-left: 0;
+  margin: 10px 0;
+  list-style: none;
+}
+
+.resume.santiago .resume-sidebar ul li {
+  margin: 8px 0;
+  font-size: 12px;
+  color: #e6f3f8 !important;
+  padding-left: 15px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.resume.santiago .resume-sidebar ul li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #a8d5e8;
+  font-weight: bold;
+}
+
+.resume.santiago .resume-content {
+  padding: 40px 35px;
+  background: #ffffff !important;
+}
+
+.resume.santiago .resume-content h4 {
+  color: #2c5f7c !important;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 25px 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #2c5f7c;
+  padding-bottom: 5px;
+}
+
+.resume.santiago .resume-content h4:first-child {
+  margin-top: 0;
+}
+
+.resume.santiago .resume-content p {
+  margin: 10px 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #2d2d2d !important;
+  text-align: justify;
+}
+
+.resume.santiago .resume-content ul {
+  padding-left: 20px;
+  margin: 10px 0;
+  list-style: none;
+}
+
+.resume.santiago .resume-content ul li {
+  margin: 10px 0;
+  font-size: 13px;
+  color: #2d2d2d !important;
+  line-height: 1.6;
+  padding-left: 15px;
+  position: relative;
+}
+
+.resume.santiago .resume-content ul li:before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #2c5f7c;
+  font-size: 10px;
+}
+
+/* ========== CLASSIC TEMPLATE ========== */
+.resume.classic {
+  background: #ffffff !important;
+  color: #000000 !important;
+  padding: 50px 60px !important;
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  min-height: 842px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.resume.classic .resume-header {
+  text-align: center;
+  border-bottom: 3px double #000000;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+
+.resume.classic .resume-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000 !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.resume.classic h4 {
+  color: #000000 !important;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 20px 0 10px 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 5px;
+}
+
+.resume.classic p, .resume.classic ul li {
+  font-size: 12px;
+  color: #000000 !important;
+  line-height: 1.6;
+}

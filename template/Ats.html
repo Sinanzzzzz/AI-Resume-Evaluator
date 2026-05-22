@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATS Score Calculator - AI Resume Suite</title>
+
+  
+  <link rel="stylesheet" href="style.css" />
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  
+  
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+
+  
+  <nav class="navbar">
+    <a href="index.html">⬅ Back to Home</a>
+    <h2>ATS Score Calculator</h2>
+    <button id="themeToggle">🌙 / ☀️</button>
+  </nav>
+
+  
+  <div style="max-width: 900px; margin: 0 auto; padding: 20px;">
+
+    
+    <form id="resumeForm" class="form-card">
+      <h3 style="margin-top: 0;">📤 Upload Your Documents</h3>
+      <p style="color: var(--muted); margin-bottom: 20px;">
+        Get instant ATS compatibility analysis with AI-powered insights and personalized skill gap analysis with learning roadmap.
+      </p>
+
+      <label for="resumeFile">📄 Upload Resume (PDF) *</label>
+      <input
+        type="file"
+        id="resumeFile"
+        name="resume"
+        accept=".pdf"
+        required
+      />
+
+      <label for="jobDesc">📋 Job Description *</label>
+      <textarea
+        id="jobDesc"
+        name="job_desc"
+        rows="10"
+        placeholder="Paste the complete job description here...
+
+Include: job title, responsibilities, required skills, qualifications, and any other relevant details."
+        required
+      ></textarea>
+
+      <button type="submit" style="width: 100%; padding: 15px; font-size: 1.1rem;">
+         Analyze Resume
+      </button>
+    </form>
+
+    
+    <div id="output"></div>
+
+    
+    <div id="improvementSection" style="display: none;">
+      <div class="form-card" style="margin-top: 30px; border: 2px solid var(--accent); background: linear-gradient(to bottom, var(--accent-glow), transparent);">
+        <h3 style="color: var(--accent); margin: 0 0 15px 0;">
+          🤖 AI-Powered Resume Optimization
+        </h3>
+
+        <p style="color: var(--text); line-height: 1.8; margin-bottom: 10px;">
+          <strong>Boost your ATS score!</strong> Our AI can optimize your resume by:
+        </p>
+
+        <ul style="color: var(--muted); line-height: 1.8; margin-bottom: 20px;">
+          <li>✅ Incorporating relevant keywords naturally</li>
+          <li>✅ Improving formatting for ATS readability</li>
+          <li>✅ Enhancing achievement descriptions</li>
+          <li>✅ Aligning content with job requirements</li>
+          <li>✅ Maintaining truthfulness of your experience</li>
+        </ul>
+
+        <div style="display: flex; gap: 15px; margin-top: 20px;">
+          <button id="applyAIFixes" style="flex: 2; font-size: 1.05rem;">
+             Optimize Resume with AI
+          </button>
+          <button id="skipImprovement" class="secondary" style="flex: 1;">
+            Skip for Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div id="improvementResults" style="display: none;"></div>
+
+    
+    <div id="atsPdfWrapper" style="position: fixed; left: -9999px; top: 0; width: 210mm; background: white;"></div>
+
+  </div>
+
+ 
+  <footer style="text-align: center; padding: 40px 20px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 60px;">
+    <p>AI Resume Suite - Powered by Advanced AI Technology</p>
+    <p style="font-size: 0.9rem;">Optimize your job search with intelligent resume analysis & skill gap insights</p>
+  </footer>
+
+  >
+  <script src="script.js"></script>
+
+</body>
+</html>

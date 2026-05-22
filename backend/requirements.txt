@@ -1,0 +1,9 @@
+flask
+flask-cors
+pdfminer.six
+sentence-transformers
+scikit-learn
+python-dotenv
+torch
+pytesseract
+Pillow

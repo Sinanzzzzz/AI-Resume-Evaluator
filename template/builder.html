@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional ATS Resume Builder</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="build/builder.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar">
+<a href="index.html">⬅ Back</a>
+<h2>ATS Resume Builder</h2>
+<button id="themeToggle">🌙 / ☀️</button>
+</nav>
+
+<main class="builder-main">
+
+<section class="editor-section">
+<div class="form-card">
+
+<h3>Select Resume Template</h3>
+
+<select id="templateSelector" style="width:100%;padding:12px;margin-bottom:20px;border:1px solid var(--border);border-radius:4px;background:var(--card);color:var(--text);font-size:14px;">
+<option value="modern">Modern ATS Template (Default)</option>
+<option value="santiago">Santiago Template (Colored Sidebar)</option>
+<option value="classic">Classic Template (Traditional)</option>
+</select>
+
+<h3>Personal Information</h3>
+
+<input id="name" placeholder="Full Name (Required)">
+<input id="title" placeholder="Professional Title (e.g. Software Engineer)">
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+<input id="phone" placeholder="Phone Number">
+<input id="email" placeholder="Email Address">
+</div>
+
+<input id="address" placeholder="Location (City, State)">
+<input id="github" placeholder="GitHub Profile (Optional)">
+<input id="linkedin" placeholder="LinkedIn Profile (Optional)">
+<input id="website" placeholder="Website/Portfolio (Optional)">
+
+<h3>Professional Content</h3>
+
+<label>Professional Summary</label>
+<textarea id="summary" placeholder="Summarize your key achievements..."></textarea>
+
+<label>Technical Skills (Comma Separated)</label>
+<textarea id="skills" placeholder="Java, Python, Leadership, SEO..."></textarea>
+
+<label>Soft Skills (Comma Separated)</label>
+<textarea id="softSkills" placeholder="Collaboration, Problem-solving..."></textarea>
+
+<label>Additional Skills (Comma Separated)</label>
+<textarea id="additionalSkills" placeholder="Public Speaking, Writing..."></textarea>
+
+<label>Work Experience (New line for each role)</label>
+<textarea id="experience" rows="5" placeholder="Senior Developer - Tech Corp (2020-Present)"></textarea>
+
+<label>Education (New line for each degree)</label>
+<textarea id="education" placeholder="B.S. Computer Science - State University"></textarea>
+
+<label>Certifications (New line for each)</label>
+<textarea id="certifications" placeholder="AWS Certified Solutions Architect"></textarea>
+
+<!-- NEW PROJECT SECTION -->
+<label>Projects (New line for each)</label>
+<textarea id="projects" placeholder="AI Resume Analyzer using NLP"></textarea>
+
+<label>Languages (Comma Separated)</label>
+<textarea id="languages" placeholder="English, Spanish, French..."></textarea>
+
+<label>Hobbies & Interests (Comma Separated)</label>
+<textarea id="hobbies" placeholder="Photography, Marathon Running..."></textarea>
+
+<div style="display:flex;gap:10px;margin-top:20px;">
+<button id="generateBtn" style="flex:2;">Generate & Preview</button>
+
+
+<button id="downloadTxtBtn" style="display:none;flex:1;background:var(--card);color:var(--text);border:1px solid var(--border);">
+TXT
+</button>
+</div>
+
+</div>
+</section>
+
+<section class="preview-section">
+
+<h3 style="margin-left:20px;color:var(--muted);">Live Preview</h3>
+
+<div id="resumeContainer">
+
+<div class="resume-placeholder">
+Complete the form to generate your professional ATS-optimized resume.
+</div>
+
+</div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+<script src="build/builder.js"></script>
+
+</body>
+</html>
